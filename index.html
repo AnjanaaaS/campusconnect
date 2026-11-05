@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusConnect | Campus Event Management and Registration Portal</title>
+    <link rel = "stylesheet" href = "applicablecssfile.css">
+</head>
+<body>
+    <header class = "header">
+        <h2 class="logo"> CampusConnect</h2>
+        <nav class = "navbar">
+            <ul>
+<li><a href="#home"> Home </a></li>
+<li><a href="#events"> Events </a></li>
+<li><a href="#calendar"> Calendar </a> </li>
+<li><a href="#register"> Register </a> </li>
+<li><a href="#organizer"> Organizer </a> </li>
+<li><a href="#faq">FAQ</a> </li>
+<li><a href="#contact">Contact</a> </li>
+</ul>
+
+
+        </nav>
+
+</header>
+<main>
+    <section class =  "hero" id = "home">
+        <h1>Campus Event Management and Registration Portal</h1>
+<p>Find campus events, register online and check live seat availability.</p>
+<a class="button" href="#register">Register Now</a>
+</section>
+
+<section class="search" id="search">
+<h2> Search Events </h2>
+<form action= "#events" method="get">
+<label for="search-box">Event name:</label>
+<input type="text" id="search-box" name="search" placeholder="Enter event name">
+<input type="submit" value="Search">
+</form>
+<p id="search-message" class="message"></p>
+</section>
+<section class="categories" id="categories">
+<h2>Event Categories</h2>
+<ul>
+<li class="category">Technical Events</li>
+<li class="category">Cultural Events</li>
+<li class="category">Sports Events</li>
+<li class="category">Workshops and Seminars</li>
+    </ul>
+</section>
+<section class="events" id="events">
+<h2>Upcoming Events</h2>
+
+<div class="event-box" data-id="hackathon">
+<h3>Hackathon 2026</h3>
+<p>Date: 12 November 2026</p>
+<p>Venue: Main Auditorium</p> <!--div done-->
+<p>Eligibility: All engineering students</p>
+<p>Seats available: <span id="seats-hackathon">40</span> out of 100</p>
+<a class="button" href="#register">Register</a>
+</div>
+
+
+<div class="event-box" data-id="cultural">
+<h3>Cultural Night</h3>
+<p>Date: 18 November 2026</p>
+<p>Venue: Open Air Theatre</p>
+<p>Eligibility: All students</p>
+<p>Seats available: <span id="seats-cultural">120</span> out of 300</p>
+<a class="button" href="#register">Register</a>
+  </div>
+
+     <div class="event-box" data-id="workshop">
+<h3>Web Development Workshop</h3>
+<p>Date: 25 November 2026</p>
+<p>Venue: Computer Lab 2</p>
+<p>Eligibility: First and second year students</p>
+<p>Seats available: <span id="seats-workshop">15</span> out of 60</p>
+<a class="button" href="#register">Register</a>
+</div>
+</section>
+
+
+<section class="calendar" id="calendar">
+<h2>Event Calendar</h2>
+<table border="1">
+<caption>Events this month</caption>
+<tr>
+<th>Date</th>
+<th>Event</th>
+<th>Venue</th>
+<th>Time</th>
+</tr>
+<tr>
+<td>12 November 2026</td>
+<td>Hackathon 2026</td>
+<td>Main Auditorium</td>
+<td>9:00 AM</td>
+</tr>
+<tr>
+<td>18 November 2026</td>
+<td>Cultural Night</td>
+<td>Open Air Theatre</td>
+<td>6:00 PM</td>
+  </tr>
+<tr>
+<td>25 November 2026</td>
+<td>Web Development Workshop</td>
+<td>Computer Lab 2</td>
+<td>10:00 AM</td>
+</tr>
+</table>
+</section>
+
+<section class="registration" id="register">
+<h2>Student Registration</h2>
+<form action="#" method="post">
+<label for="student-name">Full name:</label>
+<input type="text" id="student-name" name="student_name" required>
+
+<label for="enrollment">Enrollment number:</label>
+<input type="text" id="enrollment" name="enrollment" required>
+
+<label for="student-email">College email:</label>
+<input type="email" id="student-email" name="student_email" required>
+
+<label for= "event-choice">Select event: </label>
+<select id="event-choice" name="event_choice">
+<option value ="hackathon">Hackathon 2026</option>
+<option value="cultural">Cultural Night</option>
+<option value ="workshop">Web Development Workshop</option>
+</select>
+
+<input type="submit" value="Register">
+<input type="reset" value="Clear">
+</form>
+<p id="register-message" class="message"></p>
+</section>
+
+<section class="organizer" id="organizer">
+<h2>Organizer: Create an Event</h2>
+<form action="#" method="post">
+<label for="event-name">Event name:</label>
+<input type="text" id="event-name" name="event_name" required>
+
+<label for="event-date">Date:</label>
+<input type="date" id="event-date" name="event_date" required>
+
+<label for="event-venue">Venue:</label>
+<input type="text" id="event-venue" name="event_venue" required>
+
+<label for="event-eligibility">Eligibility: </label>
+<input type="text" id="event-eligibility" name="event_eligibility">
+
+<label for="event-limit">Registration limit:</label>
+<input type="number" id="event-limit" name="event_limit" min="1" required>
+
+<label for="event-description">Description:</label>
+<textarea id="event-description" name="event_description" rows="4" cols="40"></textarea>
+
+<input type="submit"  value="Create Event">
+</form>
+<p id="organizer-message" class="message"></p>
+</section>
+
+<section class="faq" id="faq">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I register for an event?</h3>
+<p>Fill in the student registration form and submit it to get your confirmation slip.</p>
+<h3>Can I see how many seats are left?</h3>
+<p>Yes, every event shows its live seat availability.</p>
+<h3>How can I organize an event?</h3>
+<p>Use the organizer form to add the schedule, venue, eligibility and registration limit.</p>
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<p>Email: <a href="mailto:events@campusconnect.lpu.edu.in">events lpuhackathon2026@lpu.co.in </a></p>
+<p>Phone: <a href="tel:+910000000000">+91 01824-517000 </a></p>
+<p>Address: Event Management (DSEE / Cultural Activities) Division of Student Welfare and cultural/entertainment clubs are centrally  </p>
+<p> for more informations contact Event management Department LPU</p>
+
+</section>
+
+</main>
+
+<footer class="footer">
+<p>&copy; 2026 @compusevent.lpu.in All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
